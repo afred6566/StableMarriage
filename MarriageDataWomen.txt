@@ -1,0 +1,8 @@
+5
+Anne Joyce Nancy Patricia Susan
+ // Preferences Women: 
+   Nancy: John Brian Stephen Robert George
+   Joyce: George John Stephen Robert Brian
+   Patricia: George Brian Robert Stephen John
+   Anne: George Stephen John Brian Robert
+   Susan: Brian George Stephen John Robert
