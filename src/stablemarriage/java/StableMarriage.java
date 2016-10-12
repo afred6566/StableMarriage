@@ -8,13 +8,12 @@ public class StableMarriage {
     static Scanner S1, S2;
     static int numMen, numWomen;      	 	
     static String[]  men, women; 		   
-    static String[]  mPartner, wPartner;       
-    static boolean[] isWomanTaken, isManTaken;
-    static LinkedList<String> John, Brian, George, Robert, Stephen;
-    static LinkedList<String> Nancy, Joyce, Patricia, Anne, Susan;
+    static LinkedList<String> male1, male2, male3, male4, male5;
+    static LinkedList<String> woman1, woman2, woman3, woman4, woman5;
     
     public static void main(String[] args) throws Exception {
-        Scanner stdin = new Scanner(System.in);       
+        Scanner stdin = new Scanner(System.in); 
+        String choice;
         readFile("MarriageDataMen.txt");
         readFile("MarriageDataWomen.txt");
         System.out.println("Number of men and women: " + numMen);
@@ -28,19 +27,22 @@ public class StableMarriage {
             System.out.print(women1 + " ");
         }
         System.out.println();
-        System.out.println("Men Preferences: ");
-        System.out.println(John + "\n" + Robert + "\n" + Brian + "\n" + 
-                Stephen + "\n" + George);
-        System.out.println("women Preferences: ");
-        System.out.println(Nancy + "\n" + Joyce + "\n" + Patricia + "\n" + 
-                Anne + "\n" + Susan);
+        System.out.println("Men Preferences: " + "\n" + 
+                male1 + "\n" + male4 + "\n" + male2 + "\n" + 
+                male5 + "\n" + male3);
+        System.out.println("Women Preferences: " + "\n" + 
+                woman1 + "\n" + woman2 + "\n" + woman3 + "\n" + 
+                woman4 + "\n" + woman5);
         System.out.println();
         System.out.print("Choose who will propose(men or women): ");
-        if (stdin.next().equalsIgnoreCase("men")){
+        choice = stdin.next();
+        if (choice.equalsIgnoreCase("men")){
             
-        } else if (stdin.next().equalsIgnoreCase("women")){
+        } else if (choice.equalsIgnoreCase("women")) { 
             
-        } 
+        } else {
+            System.out.println("Error, must choose men or women");
+        }
     }
     public static void readFile(String MarriageData) throws Exception {
         F_MEN = new File("MarriageDataMen.txt");
@@ -57,41 +59,41 @@ public class StableMarriage {
             S1.hasNext();
             men[i] = S1.next();
         }
-        John = new LinkedList<>();
+        male1 = new LinkedList<>();
         S1.nextLine();
         S1.nextLine();
         S1.next();
         for (int i = 0; i < numMen; i++){
             S1.hasNext();
-            John.add(S1.next());
+            male1.add(S1.next());
         }
-        Robert = new LinkedList<>();
+        male4 = new LinkedList<>();
         S1.nextLine();
         S1.next();
         for (int i = 0; i < numMen; i++){
             S1.hasNext();
-            Robert.add(S1.next());
+            male4.add(S1.next());
         }
-        Brian = new LinkedList<>();
+        male2 = new LinkedList<>();
         S1.nextLine();
         S1.next();
         for (int i = 0; i < numMen; i++){
             S1.hasNext();
-            Brian.add(S1.next());
-        }
-        Stephen = new LinkedList<>();
+            male2.add(S1.next());
+        }  
+        male5 = new LinkedList<>();
         S1.nextLine();
         S1.next();
         for (int i = 0; i < numMen; i++){
             S1.hasNext();
-            Stephen.add(S1.next());
-        }    
-        George = new LinkedList<>();
+            male5.add(S1.next());
+        }  
+        male3 = new LinkedList<>();
         S1.nextLine();
         S1.next();
         for (int i = 0; i < numMen; i++){
             S1.hasNext();
-            George.add(S1.next());
+            male3.add(S1.next());
         }
         while (S2.hasNextInt()){
             numWomen = S2.nextInt();
@@ -102,41 +104,41 @@ public class StableMarriage {
             S2.hasNext();
             women[i] = S2.next();
         }   
-        Nancy = new LinkedList<>();
+        woman1 = new LinkedList<>();
         S2.nextLine();
         S2.nextLine();
         S2.next();
         for (int i = 0; i < numMen; i++){
             S2.hasNext();
-            Nancy.add(S2.next());
+            woman1.add(S2.next());
+        }    
+        woman2 = new LinkedList<>();
+        S2.nextLine();
+        S2.next();
+        for (int i = 0; i < numMen; i++){
+            S2.hasNext();
+            woman2.add(S2.next());
         }
-        Joyce = new LinkedList<>();
+        woman3 = new LinkedList<>();
         S2.nextLine();
         S2.next();
         for (int i = 0; i < numMen; i++){
             S2.hasNext();
-            Joyce.add(S2.next());
-        }   
-        Patricia = new LinkedList<>();
-        S2.nextLine();
-        S2.next();
-        for (int i = 0; i < numMen; i++){
-            S2.hasNext();
-            Patricia.add(S2.next());
-        }     
-        Anne = new LinkedList<>();
-        S2.nextLine();
-        S2.next();
-        for (int i = 0; i < numMen; i++){
-            S2.hasNext();
-            Anne.add(S2.next());
+            woman3.add(S2.next());
         }
-        Susan = new LinkedList<>();
+        woman4 = new LinkedList<>();
         S2.nextLine();
         S2.next();
         for (int i = 0; i < numMen; i++){
             S2.hasNext();
-            Susan.add(S2.next());
+            woman4.add(S2.next());
+        }
+        woman5 = new LinkedList<>();
+        S2.nextLine();
+        S2.next();
+        for (int i = 0; i < numMen; i++){
+            S2.hasNext();
+            woman5.add(S2.next());
         }   
     }
 }
