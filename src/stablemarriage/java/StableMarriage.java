@@ -65,7 +65,6 @@ public class StableMarriage {
             S1.hasNext();
             John.add(S1.next());
         }
-      
         Robert = new LinkedList<>();
         S1.nextLine();
         S1.next();
@@ -73,7 +72,6 @@ public class StableMarriage {
             S1.hasNext();
             Robert.add(S1.next());
         }
-     
         Brian = new LinkedList<>();
         S1.nextLine();
         S1.next();
@@ -81,15 +79,13 @@ public class StableMarriage {
             S1.hasNext();
             Brian.add(S1.next());
         }
-       
         Stephen = new LinkedList<>();
         S1.nextLine();
         S1.next();
         for (int i = 0; i < numMen; i++){
             S1.hasNext();
             Stephen.add(S1.next());
-        }
-        
+        }    
         George = new LinkedList<>();
         S1.nextLine();
         S1.next();
@@ -114,23 +110,20 @@ public class StableMarriage {
             S2.hasNext();
             Nancy.add(S2.next());
         }
-       
         Joyce = new LinkedList<>();
         S2.nextLine();
         S2.next();
         for (int i = 0; i < numMen; i++){
             S2.hasNext();
             Joyce.add(S2.next());
-        }
-     
+        }   
         Patricia = new LinkedList<>();
         S2.nextLine();
         S2.next();
         for (int i = 0; i < numMen; i++){
             S2.hasNext();
             Patricia.add(S2.next());
-        }
-      
+        }     
         Anne = new LinkedList<>();
         S2.nextLine();
         S2.next();
@@ -138,7 +131,6 @@ public class StableMarriage {
             S2.hasNext();
             Anne.add(S2.next());
         }
-        
         Susan = new LinkedList<>();
         S2.nextLine();
         S2.next();
