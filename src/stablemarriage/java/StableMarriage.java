@@ -37,7 +37,7 @@ public class StableMarriage {
         System.out.print("Choose who will propose(men or women): ");
         choice = stdin.next();
         if (choice.equalsIgnoreCase("men")){
-            
+            menPropose.matchMen();
         } else if (choice.equalsIgnoreCase("women")) { 
             
         } else {
