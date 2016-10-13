@@ -35,36 +35,65 @@ public class menPropose {
         
         while (engagedCount < StableMarriage.numMen) {
             int free;
-            for (free = 0; free < StableMarriage.numMen; free++) 
-                if (!isManTaken[free])
-                    break;
-            for (int i = 0; i < StableMarriage.numMen && !isManTaken[free]; i++) {
-                wPartner = new String[StableMarriage.numMen];
-                if (!isWomanTaken[i]) {
-                    wPartner[i] = StableMarriage.male1.get(i);
-                    System.out.println(StableMarriage.male1.get(i));
-                    isManTaken[free] = true;
-                    engagedCount++;
-                }
-                
-            }    
-        }
-        
-        int j =0;
-        String m; 
-        
-        
-        /*
-        while(isManTaken[j] == false) {
-            m = StableMarriage.men[j];
-            w = mPrefList.get(j);
-            System.out.println(w);
-            
-            if(isWomanTaken[j] = false) {
-                mPartner[j] = (String) w.getFirst();
-                isManTaken[j] = true;
-                System.out.println(mPartner[j]);
+            wPartner = new String[StableMarriage.numMen];
+            for (free = 0; free < StableMarriage.numMen; free++) {
+         
+                for (int i = 0; engagedCount < 1 && (!isManTaken[free]) ; i++) {
+                    
+                    if (!isWomanTaken[i]) {
+                        wPartner[0]= StableMarriage.male1.get(i);
+                        System.out.println("Couples: ");
+                        System.out.println(StableMarriage.men[0] + ", " + 
+                                StableMarriage.male1.get(i));
+                        isManTaken[free] = true;
+                        isWomanTaken[i] = true;
+                        engagedCount++;
+                    }  
+                }    
+                for (int i = 0; engagedCount < 2 && !isManTaken[free]; i++) {
+                    if (!isWomanTaken[free]) {
+                        wPartner[1] = StableMarriage.male4.get(i);
+                        System.out.println(StableMarriage.men[1] + ", " + 
+                                wPartner[1]);
+                        isManTaken[free] = true;
+                        isWomanTaken[i] = true;
+                        engagedCount++;
+                    }
+                } 
+                for (int i = 0; engagedCount < 3 && !isManTaken[free]; i++) {
+                    
+                    if (!isWomanTaken[free]) {
+                        wPartner[2] = StableMarriage.male2.get(i);
+                        System.out.println(StableMarriage.men[2] + ", " +
+                                wPartner[2]);
+                        isManTaken[free] = true;
+                        isWomanTaken[i] = true;
+                        engagedCount++;
+                    }
+                } 
+                for (int i = 0; engagedCount < 4 && !isManTaken[free]; i++) {
+                    
+                    if (!isWomanTaken[free]) {
+                        wPartner[3] = StableMarriage.male5.get(i);
+                        System.out.println(StableMarriage.men[3] + ", " +
+                                wPartner[3]);
+                        isManTaken[free] = true;
+                        isWomanTaken[i] = true;
+                        engagedCount++;
+                    }
+                } 
+                for (int i = 0; engagedCount < 5 && !isManTaken[free]; i++) {
+                    
+                    if (!isWomanTaken[free] ) {
+                        wPartner[4] = StableMarriage.male3.get(i);
+                        System.out.println(StableMarriage.men[4] + ", " +
+                                wPartner[4]);
+                        isManTaken[free] = true;
+                        isWomanTaken[i] = true;
+                        engagedCount++;
+                    }
+                } 
             }
-        } */
+        }
     }
  }
