@@ -39,14 +39,14 @@ public class menPropose {
                 if (!isManTaken[free])
                     break;
             for (int i = 0; i < StableMarriage.numMen && !isManTaken[free]; i++) {
-                
+                wPartner = new String[StableMarriage.numMen];
                 if (!isWomanTaken[i]) {
-           
+                    wPartner[i] = StableMarriage.male1.get(i);
+                    System.out.println(StableMarriage.male1.get(i));
+                    isManTaken[free] = true;
                     engagedCount++;
-                } else{
-                    String currentPartner = wPartner[i];
                 }
-                System.out.println(wPartner[i]);
+                
             }    
         }
         
